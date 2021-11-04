@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Comptible' content='IE=edge'>
+	<meta name='viewport' content="width=device-width, initial scale=1.0">
+	<title>play.homovidens.net/login</title>
+	<link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+	<div class='login-form' style="color: white; margin-top: 30px; text-shadow: 2px 2px #000000">
+		<h2>login con node.js</h2>
+    <form action="auth" method="POST">
+    	<input type="text" name="username" id="user" placeholder="username"  autofocus required> 
+        <input type="password" name="password" id="password" placeholder="password" required>
+        <input type="submit" class="btn-login" value="Login">
+    <!--	<button type="submit" class="" >Login</button> -->
+    </form>     
+    <a href="register" class="btn-register">Register</a>
+    
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+   <% if (typeof alert != "undefined")  { %>
+    <script>
+    Swal.fire({
+      title:'<%= alertTitle %>',
+      text:'<%= alertMessage %>',
+      icon:'<%= alertIcon %>',
+      showConfirmButton: <%= showConfirmButton %>,
+      timer: <%= timer %>
+    }).then(()=>{
+      window.location='/<%= ruta %>'
+    })
+    </script>
+  <% } %>
+    
+	</div>
+
+</body>
+</html>
+
+
+
+    
